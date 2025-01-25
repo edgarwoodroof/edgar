@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<!-- Add this right after opening <body> tag -->
+<div class="mouse-trailer"></div>
+
+
+</head>
+<body>
+
+
+
+
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --text-primary: #ffffff;
+            --accent: #ff4d5a;
+            --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 2rem;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: var(--transition);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        /* Project Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 10%;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            aspect-ratio: 1/1.2;
+            transition: var(--transition);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-overlay {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Blender<br>Portfolio</h1>
+            <p>By Edgar Woodroof</p>
+        </div>
+    </section>
+
+<!-- Remove the duplicate/nested section -->
+<section class="projects-grid" id="work">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+        <!-- Path needs to match your actual file location -->
+        <img src="images/project1.jpg" alt="Mobile App Design" class="project-image">
+        <div class="project-overlay">
+            <h3>Custom lens test</h3>
+            <p>I modeled a lens in blender to add more realism then but together this scene to test it out!!</p>
+        </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+        <img src="images/project2.jpg" alt="Web Design Project" class="project-image">
+        <div class="project-overlay">
+            <h3>Shot of a shoe on pavement</h3>
+            <p>Another test for the new lense model</p>
+        </div>
+    </div>
+
+    <!-- Original Project Card (updated path) -->
+    <div class="project-card">
+        <img src="images/project3.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>An ancient Greek statue</h3>
+            <p>Another test for the new lense model</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="projects-grid" id="work">
+
+    <div class="project-card">
+        <img src="images/project4.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A photoscanned car crash</h3>
+            <p>Another test for the new lense model</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project5.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A simple layout of every day items </h3>
+            <p>Another test for the new lense model</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project6.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A phone on a desk</h3>
+            <p>Another test for the new lense model</p>
+        </div>
+    </div>
+</section>
+
+<section class="projects-grid" id="work">
+
+    <div class="project-card">
+        <img src="images/project7.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A abstract matirial test</h3>
+            <p>A cool abstract ball matrial thing</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project8.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>The clasic donut tutorial </h3>
+            <p>Blender guru's classic</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project9.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>Another abstract matiral orbit</h3>
+            <p>This is a still from a looping animation I made </p>
+        </div>
+    </div>
+</section>
+
+<section class="projects-grid" id="work">
+
+    <div class="project-card">
+        <img src="images/project10.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A cool stialised room</h3>
+            <p>A low poly isometric room render</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project11.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>Another phone render </h3>
+            <p>Another test for the new lense model</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project12.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>Fake advert for a moisturizer company</h3>
+            <p>My own disigned and modelled advert</p>
+        </div>
+    </div>
+</section>
+
+<section class="projects-grid" id="work">
+
+    <div class="project-card">
+        <img src="images/project13.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A skate board on a ramp</h3>
+            <p>Again useing my new lens</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project14.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>A truck that was made by converting a svg</h3>
+            <p>This was made by following a tutrial by polyfjord</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project15.jpg" alt="Brand Identity" class="project-image">
+        <div class="project-overlay">
+            <h3>Another svg this time a burger</h3>
+            <p>This was made by following a tutrial by polyfjord</p>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+/* Video Player Styling */
+.project-media {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    aspect-ratio: 16/9; /* Standard video ratio */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hover Effects */
+.project-card:hover .project-media {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Video Controls Styling */
+video::-webkit-media-controls-panel {
+    background: rgba(0,0,0,0.7) !important;
+}
+
+video::-webkit-media-controls-play-button {
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+</style>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'var(--transition)';
+            observer.observe(card);
+        });
+
+        // Dynamic Cursor
+        document.addEventListener('mousemove', (e) => {
+            document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
+            document.documentElement.style.setProperty('--cursor-y', `${e.clientY}px`);
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+  <!-- Add this modal HTML before closing </body> -->
+<div class="lightbox">
+    <div class="lightbox-content">
+        <span class="close-btn">&times;</span>
+        <img src="" alt="Expanded view" class="lightbox-image">
+        <div class="lightbox-text">
+            <h3 class="lightbox-title"></h3>
+            <p class="lightbox-description"></p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: 2rem;
+    animation: scaleUp 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+.lightbox-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Modify the lightbox-text positioning */
+.lightbox-text {
+    position: absolute;
+    bottom: 20px; /* Changed from -40px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+}
+
+/* Add transition for smooth movement */
+.lightbox-text {
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Adjust position when image is at full height */
+.lightbox-image[style*="height: 80vh"] + .lightbox-text {
+    bottom: 20px;
+    transform: translateX(-50%) translateY(-20%);
+}
+}
+</style>
+
+<script>
+// Lightbox Functionality
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const lightbox = document.querySelector('.lightbox');
+        const imgSrc = card.querySelector('img').src;
+        const title = card.querySelector('h3').textContent;
+        const description = card.querySelector('p').textContent;
+
+        lightbox.querySelector('.lightbox-image').src = imgSrc;
+        lightbox.querySelector('.lightbox-title').textContent = title;
+        lightbox.querySelector('.lightbox-description').textContent = description;
+        
+        document.body.style.overflow = 'hidden';
+        lightbox.classList.add('active');
+    });
+});
+
+// Close Lightbox
+document.querySelector('.lightbox').addEventListener('click', (e) => {
+    if (e.target.classList.contains('lightbox') || e.target.classList.contains('close-btn')) {
+        document.body.style.overflow = 'auto';
+        document.querySelector('.lightbox').classList.remove('active');
+    }
+});
+
+// Keyboard Support
+document.addEventListener('keydown', (e) => {
+    const lightbox = document.querySelector('.lightbox');
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        document.body.style.overflow = 'auto';
+        lightbox.classList.remove('active');
+    }
+});
+</script>
+
+<style>
+/* Dark animated gradient */
+body {
+    background: linear-gradient(
+        45deg, 
+        #0a0a0a, 
+        #1a1a1a, 
+        #2d2d2d, 
+        #1a1a1a, 
+        #0a0a0a
+    );
+    background-size: 400% 400%;
+    animation: gradientFlow 25s ease infinite;
+    min-height: 100vh;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhanced noise texture */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+        radial-gradient(circle at 50% 50%, rgba(0,0,0,0.15) 0%, transparent 100%);
+    opacity: 0.75;
+    mix-blend-mode: overlay;
+    z-index: ;
+    pointer-events: none;
+}
+
+/* Add secondary moving texture */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 2px,
+            transparent 2px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            135deg,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    animation: panTexture 40s linear infinite;
+    z-index: -2;
+    opacity: 0.4;
+}
+
+@keyframes panTexture {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-66.66%, -66.66%); }
+}
+
+/* Content adjustments for better contrast */
+.hero, .projects-grid, .nav {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        0 12px 24px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+<style>
+/* Add this CSS */
+body {
+    position: relative;
+    overflow-x: hidden;
+    background: #0a0a0a;
+    min-height: 100vh;
+}
+
+.canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.nav, .projects-grid, .hero {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+}
+</style>
+
+<!-- Add this right after opening <body> tag -->
+<div class="canvas-container">
+    <canvas id="dynamic-bg"></canvas>
+</div>
+
+<script>
+// Add this JavaScript
+const canvas = document.getElementById('dynamic-bg');
+const ctx = canvas.getContext('2d');
+let mouseX = 0;
+let mouseY = 0;
+
+// Set canvas size
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Track mouse position
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Create gradient animation
+function createGradient() {
+    const gradient = ctx.createRadialGradient(
+        mouseX + (Math.random() * 20 - 10),
+        mouseY + (Math.random() * 20 - 10),
+        0,
+        mouseX + (Math.random() * 100 - 50),
+        mouseY + (Math.random() * 100 - 50),
+        800
+    );
+    
+    gradient.addColorStop(0, `hsl(${Date.now() * 0.03 % 360}, 50%, 50%)`);
+    gradient.addColorStop(0.5, `hsl(${(Date.now() * 0.03 + 120) % 360}, 40%, 40%)`);
+    gradient.addColorStop(1, `hsl(${(Date.now() * 0.03 + 240) % 360}, 30%, 30%)`);
+
+    return gradient;
+}
+
+// Animation loop
+function animate() {
+    ctx.fillStyle = createGradient();
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Add subtle noise
+    ctx.fillStyle = '#0001';
+    for(let i = 0; i < 100; i++) {
+        ctx.fillRect(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height,
+            1, 1
+        );
+    }
+    
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// Add parallax effect to project cards
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.transform = `
+            perspective(2000px)
+            rotateX(${(y - rect.height/2) / 20}deg)
+            rotateY(${-(x - rect.width/2) / 20}deg)
+        `;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'none';
+    });
+});
+</script>
+
+<!-- Add after Projects Grid section -->
+<section class="about-section" id="about">
+    <div class="content-wrapper">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">Aspiring blender artist.</h2>
+                <p class="bio">I am just starting to learn blender as a hobby but am looking to grow and learn.</p>
+                <div class="skill-tags">
+                    <span>3D artis</span>
+                    <span>3D Modeling</span>
+                    <span>CGI 3D</span>
+                    <span>Blender</span>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/profile.jpg" class="profile-picture">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="content-wrapper">
+        <h2 class="section-title">Let's Create Together</h2>
+        <div class="contact-grid">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" required></textarea>
+                    <label for="message">Project Details</label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message →</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.instagram.com/blender_ed_3d/" class="social-link">
+                    <span class="social-icon">↗</span>
+                    <span>instagram</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* About Section */
+.about-section {
+    padding: 8rem 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.skill-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.skill-tags span {
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 8rem 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgba(255,255,255,0.6);
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    transform: translateY(-1.5rem);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.submit-btn {
+    align-self: flex-start;
+    background: var(--accent);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateX(10px);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateX(10px);
+}
+
+@media (max-width: 500px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: fr;
+    }
+    
+    .profile-photo {
+        height: 400px;
+    }
+}
+</style>
+
+<!DOCTYPE html>
+
+<style>
+
+
+/* Modern Navigation */
+.nav {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  background: rgba(25, 25, 25, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 3rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  z-index: 1000;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 77, 90, 0.2),  /* New purple color */
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 3rem);
+}
+
+
+<style>
+/* Default project card style */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+/* Video-specific 16:9 ratio */
+.project-card.video-card {
+    aspect-ratio: 16/9;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+/* Hover effects */
+.project-card:hover img,
+.project-card:hover video {
+    transform: scale(1.05);
+}
+</style>
+
+</body>
+
+
+</body>
+</html>
